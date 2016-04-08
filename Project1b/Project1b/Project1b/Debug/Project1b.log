@@ -1,0 +1,18 @@
+﻿  Vector_PhaseB_unittests.cpp
+c:\users\rongsheng\documents\sp2016\students\cheese\project1b\vector.h(31): warning C4244: '=': conversion from 'uint64_t' to 'int', possible loss of data
+  c:\users\rongsheng\documents\sp2016\students\cheese\project1b\vector.h(21): note: while compiling class template member function 'void epl::vector<epl::vector<`anonymous-namespace'::Foo>>::init(uint64_t)'
+  c:\users\rongsheng\documents\sp2016\students\cheese\project1b\vector.h(98): note: see reference to function template instantiation 'void epl::vector<epl::vector<`anonymous-namespace'::Foo>>::init(uint64_t)' being compiled
+  c:\users\rongsheng\documents\sp2016\students\cheese\project1b\vector_phaseb_unittests.cpp(93): note: see reference to class template instantiation 'epl::vector<epl::vector<`anonymous-namespace'::Foo>>' being compiled
+c:\users\rongsheng\documents\sp2016\students\cheese\project1b\vector.h(32): warning C4244: '=': conversion from 'uint64_t' to 'int', possible loss of data
+c:\users\rongsheng\documents\sp2016\students\cheese\project1b\vector.h(34): warning C4244: 'argument': conversion from 'uint64_t' to 'size_t', possible loss of data
+c:\users\rongsheng\documents\sp2016\students\cheese\project1b\vector.h(37): warning C4244: '=': conversion from 'uint64_t' to 'int', possible loss of data
+  Vector_PhaseA_unittests.cpp
+c:\users\rongsheng\documents\sp2016\students\cheese\project1b\vector.h(31): warning C4244: '=': conversion from 'uint64_t' to 'int', possible loss of data
+  c:\users\rongsheng\documents\sp2016\students\cheese\project1b\vector.h(21): note: while compiling class template member function 'void epl::vector<epl::vector<`anonymous-namespace'::Foo>>::init(uint64_t)'
+  c:\users\rongsheng\documents\sp2016\students\cheese\project1b\vector.h(98): note: see reference to function template instantiation 'void epl::vector<epl::vector<`anonymous-namespace'::Foo>>::init(uint64_t)' being compiled
+  c:\users\rongsheng\documents\sp2016\students\cheese\project1b\vector_phasea_unittests.cpp(182): note: see reference to class template instantiation 'epl::vector<epl::vector<`anonymous-namespace'::Foo>>' being compiled
+c:\users\rongsheng\documents\sp2016\students\cheese\project1b\vector.h(32): warning C4244: '=': conversion from 'uint64_t' to 'int', possible loss of data
+c:\users\rongsheng\documents\sp2016\students\cheese\project1b\vector.h(34): warning C4244: 'argument': conversion from 'uint64_t' to 'size_t', possible loss of data
+c:\users\rongsheng\documents\sp2016\students\cheese\project1b\vector.h(37): warning C4244: '=': conversion from 'uint64_t' to 'int', possible loss of data
+  Generating Code...
+  Project1b.vcxproj -> C:\Users\Rongsheng\Documents\sp2016\students\cheese\Project1b\Project1b\Debug\Project1b.exe
