@@ -1,0 +1,17 @@
+﻿  Window.cpp
+  Params.cpp
+  LifeForm.cpp
+  LifeForm-Craig.cpp
+  Event.cpp
+  Craig.cpp
+  animals.cpp
+  Algae.cpp
+  Generating Code...
+Algae.obj : error LNK2019: unresolved external symbol "protected: void __thiscall LifeForm::reproduce(class SmartPointer<class LifeForm>)" (?reproduce@LifeForm@@IAEXV?$SmartPointer@VLifeForm@@@@@Z) referenced in function "private: void __thiscall Algae::photosynthesize(void)" (?photosynthesize@Algae@@AAEXXZ)
+Craig.obj : error LNK2001: unresolved external symbol "protected: void __thiscall LifeForm::reproduce(class SmartPointer<class LifeForm>)" (?reproduce@LifeForm@@IAEXV?$SmartPointer@VLifeForm@@@@@Z)
+Craig.obj : error LNK2019: unresolved external symbol "protected: void __thiscall LifeForm::set_course(double)" (?set_course@LifeForm@@IAEXN@Z) referenced in function "public: virtual enum Action __thiscall Craig::encounter(struct ObjInfo const &)" (?encounter@Craig@@UAE?AW4Action@@ABUObjInfo@@@Z)
+Craig.obj : error LNK2019: unresolved external symbol "protected: void __thiscall LifeForm::set_speed(double)" (?set_speed@LifeForm@@IAEXN@Z) referenced in function "protected: void __thiscall Craig::startup(void)" (?startup@Craig@@IAEXXZ)
+Craig.obj : error LNK2019: unresolved external symbol "protected: class std::vector<struct ObjInfo,class std::allocator<struct ObjInfo> > __thiscall LifeForm::perceive(double)" (?perceive@LifeForm@@IAE?AV?$vector@UObjInfo@@V?$allocator@UObjInfo@@@std@@@std@@N@Z) referenced in function "protected: void __thiscall Craig::hunt(void)" (?hunt@Craig@@IAEXXZ)
+LifeForm-Craig.obj : error LNK2019: unresolved external symbol "private: void __thiscall LifeForm::region_resize(void)" (?region_resize@LifeForm@@AAEXXZ) referenced in function "public: void __thiscall <lambda_1eda650e325f8afefa997856fbfde5b0>::operator()(void)const " (??R<lambda_1eda650e325f8afefa997856fbfde5b0>@@QBEXXZ)
+LifeForm-Craig.obj : error LNK2019: unresolved external symbol "private: void __thiscall LifeForm::age(void)" (?age@LifeForm@@AAEXXZ) referenced in function "public: void __thiscall <lambda_4ab499b762fdaea72e80e038df3d6ebe>::operator()(void)const " (??R<lambda_4ab499b762fdaea72e80e038df3d6ebe>@@QBEXXZ)
+C:\Users\Rongsheng\Documents\sp2016\students\cheese\Project2a\Project2a\Debug\Project2a.exe : fatal error LNK1120: 6 unresolved externals

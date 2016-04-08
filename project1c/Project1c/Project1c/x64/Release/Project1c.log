@@ -1,0 +1,129 @@
+﻿  Vector_PhaseA_unittests.cpp
+  Vector_PhaseB_unittests.cpp
+  Vector_PhaseC_unittests.cpp
+..\..\Vector_PhaseC_unittests.cpp(14): error C2872: 'vector': ambiguous symbol
+  c:\users\rongsheng\documents\sp2016\students\cheese\project1c\Vector.h(36): note: could be 'epl::vector'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vector(678): note: or       'std::vector'
+c:\users\rongsheng\documents\sp2016\students\cheese\project1c\Vector.h(159): error C2556: 'epl::vector<int>::iterator_helper<const T> epl::vector<T>::begin(void)': overloaded function differs only by return type from 'epl::vector<int>::iterator_helper<T> epl::vector<T>::begin(void)'
+          with
+          [
+              T=int
+          ]
+  c:\users\rongsheng\documents\sp2016\students\cheese\project1c\Vector.h(153): note: see declaration of 'epl::vector<int>::begin'
+  ..\..\Vector_PhaseC_unittests.cpp(14): note: see reference to class template instantiation 'epl::vector<int>' being compiled
+c:\users\rongsheng\documents\sp2016\students\cheese\project1c\Vector.h(159): error C2371: 'epl::vector<int>::begin': redefinition; different basic types
+  c:\users\rongsheng\documents\sp2016\students\cheese\project1c\Vector.h(153): note: see declaration of 'epl::vector<int>::begin'
+c:\users\rongsheng\documents\sp2016\students\cheese\project1c\Vector.h(136): error C2556: 'epl::vector<int>::iterator_helper<const T> epl::vector<T>::iterator_helper<const T>::operator ++(void)': overloaded function differs only by return type from 'epl::vector<int>::iterator_helper<const T> &epl::vector<T>::iterator_helper<const T>::operator ++(void)'
+          with
+          [
+              T=int
+          ]
+  c:\users\rongsheng\documents\sp2016\students\cheese\project1c\Vector.h(126): note: see declaration of 'epl::vector<int>::iterator_helper<const T>::operator ++'
+          with
+          [
+              T=int
+          ]
+  c:\users\rongsheng\documents\sp2016\students\cheese\project1c\Vector.h(160): note: see reference to class template instantiation 'epl::vector<int>::iterator_helper<const T>' being compiled
+          with
+          [
+              T=int
+          ]
+c:\users\rongsheng\documents\sp2016\students\cheese\project1c\Vector.h(136): error C2373: 'epl::vector<int>::iterator_helper<const T>::operator ++': redefinition; different type modifiers
+          with
+          [
+              T=int
+          ]
+  c:\users\rongsheng\documents\sp2016\students\cheese\project1c\Vector.h(126): note: see declaration of 'epl::vector<int>::iterator_helper<const T>::operator ++'
+          with
+          [
+              T=int
+          ]
+c:\users\rongsheng\documents\sp2016\students\cheese\project1c\Vector.h(137): error C2460: 'epl::vector<int>::iterator_helper<const T>::t': uses 'epl::vector<int>::iterator_helper<const T>', which is being defined
+          with
+          [
+              T=int
+          ]
+c:\users\rongsheng\documents\sp2016\students\cheese\project1c\Vector.h(138): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\rongsheng\documents\sp2016\students\cheese\project1c\Vector.h(138): error C2556: 'int epl::vector<int>::iterator_helper<const T>::operator ++(void)': overloaded function differs only by return type from 'epl::vector<int>::iterator_helper<const T> &epl::vector<T>::iterator_helper<const T>::operator ++(void)'
+          with
+          [
+              T=int
+          ]
+  c:\users\rongsheng\documents\sp2016\students\cheese\project1c\Vector.h(126): note: see declaration of 'epl::vector<int>::iterator_helper<const T>::operator ++'
+          with
+          [
+              T=int
+          ]
+c:\users\rongsheng\documents\sp2016\students\cheese\project1c\Vector.h(139): error C2059: syntax error: 'return'
+c:\users\rongsheng\documents\sp2016\students\cheese\project1c\Vector.h(139): error C2238: unexpected token(s) preceding ';'
+c:\users\rongsheng\documents\sp2016\students\cheese\project1c\Vector.h(141): error C2146: syntax error: missing ';' before identifier 'Same'
+c:\users\rongsheng\documents\sp2016\students\cheese\project1c\Vector.h(161): error C3927: '->': trailing return type is not allowed after a non-function declarator
+c:\users\rongsheng\documents\sp2016\students\cheese\project1c\Vector.h(161): error C3484: syntax error: expected '->' before the return type
+c:\users\rongsheng\documents\sp2016\students\cheese\project1c\Vector.h(161): error C3613: missing return type after '->' ('int' assumed)
+c:\users\rongsheng\documents\sp2016\students\cheese\project1c\Vector.h(161): error C3646: 'ptr': unknown override specifier
+c:\users\rongsheng\documents\sp2016\students\cheese\project1c\Vector.h(161): error C2059: syntax error: '='
+c:\users\rongsheng\documents\sp2016\students\cheese\project1c\Vector.h(161): error C2238: unexpected token(s) preceding ';'
+c:\users\rongsheng\documents\sp2016\students\cheese\project1c\Vector.h(162): error C2059: syntax error: 'return'
+c:\users\rongsheng\documents\sp2016\students\cheese\project1c\Vector.h(162): error C2238: unexpected token(s) preceding ';'
+c:\users\rongsheng\documents\sp2016\students\cheese\project1c\Vector.h(164): error C2146: syntax error: missing ';' before identifier 'iterator'
+..\..\Vector_PhaseC_unittests.cpp(14): error C2440: 'initializing': cannot convert from 'initializer list' to 'epl::vector<int>'
+  ..\..\Vector_PhaseC_unittests.cpp(14): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+..\..\Vector_PhaseC_unittests.cpp(15): error C2039: 'size': is not a member of 'epl::vector<int>'
+..\..\Vector_PhaseC_unittests.cpp(15): error C2660: 'testing::internal::EqHelper<false>::Compare': function does not take 3 arguments
+..\..\Vector_PhaseC_unittests.cpp(15): error C2512: 'testing::AssertionResult': no appropriate default constructor available
+  C:\Users\Rongsheng\Documents\sp2016\gtest\include\gtest/gtest.h(256): note: see declaration of 'testing::AssertionResult'
+..\..\Vector_PhaseC_unittests.cpp(20): error C2065: 'Vector': undeclared identifier
+..\..\Vector_PhaseC_unittests.cpp(20): error C2062: type 'int' unexpected
+..\..\Vector_PhaseC_unittests.cpp(20): error C2143: syntax error: missing ';' before '{'
+..\..\Vector_PhaseC_unittests.cpp(20): error C2143: syntax error: missing ';' before '}'
+..\..\Vector_PhaseC_unittests.cpp(22): error C2065: 'x': undeclared identifier
+..\..\Vector_PhaseC_unittests.cpp(22): error C2228: left of '.size' must have class/struct/union
+  ..\..\Vector_PhaseC_unittests.cpp(22): note: type is 'unknown-type'
+..\..\Vector_PhaseC_unittests.cpp(22): error C2660: 'testing::internal::EqHelper<false>::Compare': function does not take 3 arguments
+..\..\Vector_PhaseC_unittests.cpp(22): error C2512: 'testing::AssertionResult': no appropriate default constructor available
+  C:\Users\Rongsheng\Documents\sp2016\gtest\include\gtest/gtest.h(256): note: see declaration of 'testing::AssertionResult'
+..\..\Vector_PhaseC_unittests.cpp(24): error C2065: 'x': undeclared identifier
+..\..\Vector_PhaseC_unittests.cpp(24): error C2660: 'testing::internal::EqHelper<false>::Compare': function does not take 3 arguments
+..\..\Vector_PhaseC_unittests.cpp(24): error C2512: 'testing::AssertionResult': no appropriate default constructor available
+  C:\Users\Rongsheng\Documents\sp2016\gtest\include\gtest/gtest.h(256): note: see declaration of 'testing::AssertionResult'
+..\..\Vector_PhaseC_unittests.cpp(28): error C2065: 'Vector': undeclared identifier
+..\..\Vector_PhaseC_unittests.cpp(28): error C2275: 'int32_t': illegal use of this type as an expression
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\stdint.h(19): note: see declaration of 'int32_t'
+..\..\Vector_PhaseC_unittests.cpp(28): error C3861: 'x': identifier not found
+..\..\Vector_PhaseC_unittests.cpp(31): error C2065: 'x': undeclared identifier
+..\..\Vector_PhaseC_unittests.cpp(31): error C3312: no callable 'begin' function found for type 'unknown-type'
+..\..\Vector_PhaseC_unittests.cpp(31): error C3312: no callable 'end' function found for type 'unknown-type'
+..\..\Vector_PhaseC_unittests.cpp(32): error C2065: 'v': undeclared identifier
+..\..\Vector_PhaseC_unittests.cpp(35): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+..\..\Vector_PhaseC_unittests.cpp(35): error C2143: syntax error: missing ';' before '<'
+..\..\Vector_PhaseC_unittests.cpp(37): error C2065: 'y': undeclared identifier
+..\..\Vector_PhaseC_unittests.cpp(37): error C3312: no callable 'begin' function found for type 'unknown-type'
+..\..\Vector_PhaseC_unittests.cpp(37): error C3312: no callable 'end' function found for type 'unknown-type'
+..\..\Vector_PhaseC_unittests.cpp(38): error C2065: 'v': undeclared identifier
+..\..\Vector_PhaseC_unittests.cpp(45): error C2065: 'Vector': undeclared identifier
+..\..\Vector_PhaseC_unittests.cpp(45): error C2062: type 'int' unexpected
+..\..\Vector_PhaseC_unittests.cpp(46): error C2065: 'x': undeclared identifier
+..\..\Vector_PhaseC_unittests.cpp(47): error C2065: 'x': undeclared identifier
+..\..\Vector_PhaseC_unittests.cpp(47): error C2228: left of '.pop_back' must have class/struct/union
+  ..\..\Vector_PhaseC_unittests.cpp(47): note: type is 'unknown-type'
+..\..\Vector_PhaseC_unittests.cpp(50): error C3536: 'itr': cannot be used before it is initialized
+..\..\Vector_PhaseC_unittests.cpp(50): error C2100: illegal indirection
+..\..\Vector_PhaseC_unittests.cpp(52): error C2100: illegal indirection
+..\..\Vector_PhaseC_unittests.cpp(59): error C2065: 'Vector': undeclared identifier
+..\..\Vector_PhaseC_unittests.cpp(59): error C2062: type 'int' unexpected
+..\..\Vector_PhaseC_unittests.cpp(59): error C2143: syntax error: missing ';' before '{'
+..\..\Vector_PhaseC_unittests.cpp(59): error C2143: syntax error: missing ';' before '}'
+..\..\Vector_PhaseC_unittests.cpp(60): error C2065: 'x': undeclared identifier
+..\..\Vector_PhaseC_unittests.cpp(62): error C2065: 'x': undeclared identifier
+..\..\Vector_PhaseC_unittests.cpp(62): error C2065: 'y': undeclared identifier
+..\..\Vector_PhaseC_unittests.cpp(64): error C3536: 'xi': cannot be used before it is initialized
+..\..\Vector_PhaseC_unittests.cpp(64): error C2100: illegal indirection
+..\..\Vector_PhaseC_unittests.cpp(73): error C2065: 'Vector': undeclared identifier
+..\..\Vector_PhaseC_unittests.cpp(73): error C2062: type 'int' unexpected
+..\..\Vector_PhaseC_unittests.cpp(74): error C2065: 'x': undeclared identifier
+..\..\Vector_PhaseC_unittests.cpp(75): error C2065: 'x': undeclared identifier
+..\..\Vector_PhaseC_unittests.cpp(75): error C2228: left of '.pop_back' must have class/struct/union
+  ..\..\Vector_PhaseC_unittests.cpp(75): note: type is 'unknown-type'
+..\..\Vector_PhaseC_unittests.cpp(78): error C3536: 'itr': cannot be used before it is initialized
+..\..\Vector_PhaseC_unittests.cpp(78): error C2100: illegal indirection
+..\..\Vector_PhaseC_unittests.cpp(80): error C2100: illegal indirection
