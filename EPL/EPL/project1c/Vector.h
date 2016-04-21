@@ -191,6 +191,7 @@ public:
 		}
 	}
 
+
 	vector(std::initializer_list<T> list) : vector(list.begin(), list.end()) {}
 
 	// copy constructor
