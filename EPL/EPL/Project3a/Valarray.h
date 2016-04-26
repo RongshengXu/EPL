@@ -35,6 +35,7 @@ namespace epl {
 		using RightType = Choose_type<T2>;
 		LeftType p1;
 		RightType p2;
+		Op fun;
 	public:
 		proxy(T1 const& left, T2 const& right) :
 			p1(left), p2(right) {}

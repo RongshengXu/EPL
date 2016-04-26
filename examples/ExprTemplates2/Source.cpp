@@ -8,45 +8,102 @@ using std::endl;
 class SmartString : public std::string {
 public:
 	using std::string::string;
+
+	void print(std::ostream& out) const {
+		out << (std::string const&) (*this);
+	}
 };
 
-/* implements the const String concept
- * -- has a size() method and an op[] returning char */
-class StringConcatProxy {
-	std::string s1;
-	std::string s2;
+template <typename T> struct choose_ref {
+	using type = T;
+};
+
+//template<> struct choose_ref<SmartString> {
+//	using type = SmartString const&;
+//};
+
+template <typename T> using ChooseRef = typename choose_ref<T>::type;
+
+template <typename S1Type, typename S2Type>
+class ConcatString {
+	using LeftType = ChooseRef<S1Type>;
+	using RightType = ChooseRef<S2Type>;
+	LeftType s1;
+	RightType s2;
 public:
-	StringConcatProxy(std::string const& pref, std::string const& suff) :
-		s1(pref), s2(suff) {}
+	ConcatString(S1Type const& left, S2Type const& right) :
+		s1{ left }, s2(right) {}
 
-	uint64_t size(void) const {
-		return s1.size() + s2.size();
-	}
+	uint64_t size(void) const { return s1.size() + s2.size(); }
 
-	char const& operator[](uint64_t k) const {
+	char operator[](uint64_t k) const {
 		if (k < s1.size()) { return s1[k]; }
-		else { return s1[k - s1.size()]; }
+		else { return s2[k - s1.size()]; }
 	}
 
 	void print(std::ostream& out) const {
-		out << s1;
-		out << s2;
+		s1.print(out);
+		s2.print(out);
 	}
 };
 
-std::ostream& operator<<(std::ostream& out, StringConcatProxy const& str) {
+template <typename S>
+struct Wrap : public S {
+	using S::S;
+	Wrap(const S& s) : S(s) {}
+};
+
+using string = Wrap<SmartString>;
+
+template<typename S1, typename S2>
+Wrap<ConcatString<S1,S2>>
+operator+(Wrap<S1> const& lhs, Wrap<S2> const& rhs) {
+	S1 const& left{ lhs };
+	S2 const& right{ rhs };
+	ConcatString<S1, S2> result{ left, right };
+
+	Wrap<ConcatString<S1, S2>> wrapped_result{ result };
+
+	return wrapped_result;
+}
+
+
+class CStringWrapper {
+	const char* ptr;
+public:
+	CStringWrapper(const char* ptr) { this->ptr = ptr; }
+	char operator[](uint64_t k) const { return ptr[k]; }
+	uint64_t size(void) const { return strlen(ptr); }
+	void print(std::ostream& out) const {
+		out << ptr;
+	}
+};
+
+template <typename S>
+Wrap<ConcatString<CStringWrapper, S>>
+operator+(const char* left, Wrap<S> const& right) {
+	return Wrap<ConcatString<CStringWrapper, S>>{CStringWrapper{ left }, right};
+}
+
+template <typename S>
+Wrap<ConcatString<S, CStringWrapper>>
+operator+(Wrap<S> const& left, const char* right) {
+	return Wrap<ConcatString<S, CStringWrapper>>{left, CStringWrapper{ right }};
+}
+
+template <typename T>
+std::ostream& operator<<(std::ostream& out, Wrap<T> const& str) {
 	str.print(out);
 	return out;
 }
 
-StringConcatProxy operator+(SmartString const& lhs, SmartString const& rhs) {
-	return StringConcatProxy(lhs, rhs);
-}
 
-using string = SmartString;
+/* --- client code here --- */
 
 int main(void) {
 	string first = "Craig";
 	string last = "Chase";
-	cout << first + last << endl;
+	string greeting = "Hello ";
+	cout << ((greeting + first) + last) << endl;
+	cout << ("Hello " + first) + " " + last << endl;
 }
